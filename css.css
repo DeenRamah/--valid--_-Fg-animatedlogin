@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;;
+}
+
+body
+{
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: #4070f4;
+    overflow: hidden;
+}
+.input-box
+{
+    position: relative;
+    height: 55px;
+    max-width: 60px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0px 30px;
+    border-radius: 9px;
+    transform: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.input-box.open
+{
+    max-width: 350px;
+}
+.input-box input
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    transform: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.input-box.open input
+{
+    padding: 0 15px 0 65px;
+}
+.input-box .search
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transform: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.input-box.open .search
+{
+    border-radius: 6px 0 0 6px;
+}
+.search .search-icon
+{
+    font-size: 30px;
+    color: #4070f4;
+    background: transparent;
+    transform: rotate(90deg);
+
+}
+.input-box.open .search-icon
+{
+    transform: rotate(0deg);
+}
+.input-box .close-icon
+{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    right: -55px;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transform: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.input-box.open .close-icon
+{
+    transform: translateX(-50%)rotate(180deg);
+    opacity: 1;
+    pointer-events: auto;
+}
